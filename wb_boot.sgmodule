@@ -1,0 +1,5 @@
+#!name=wb_boot
+[Script]
+wb_boot = type=http-response,pattern=^https:\/\/bootpreload\.uve\.weibo\.com\/v1\/ad\/preload,requires-body=1,max-size=0,script-path=https://ruleset.dnat.cn/scripts/wb_boot.js
+[MITM]
+hostname = %APPEND% bootpreload.uve.weibo.com

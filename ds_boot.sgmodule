@@ -1,0 +1,5 @@
+#!name=ds_boot
+[Script]
+ds_boot = type=http-response,pattern=^https:\/\/god\.gameyw\.netease\.com\/v1\/ad\/serving\/app-start,requires-body=1,max-size=0,script-path=https://ruleset.dnat.cn/scripts/ds_boot.js
+[MITM]
+hostname = %APPEND% god.gameyw.netease.com
