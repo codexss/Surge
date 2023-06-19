@@ -7,4 +7,4 @@ if (obj.placementNo === "0007") {
 } else {
     rst = '{"code":"00","message":"无广告返回"}';
 }
-$done({body: rst})
+$done({response: {body: rst}})
