@@ -1,1 +1,10 @@
-!function(){let e,a=JSON.parse($request.body);e="0007"===a.placementNo?'{"materialsList":[{"billMaterialsId":"255","filePath":"h","creativeType":1}],"advertParam":{"skipTime":1}}':"G0054"===a.placementNo?'{"code":"00","materialsList":[{}]}':'{"code":"00","message":"无广告返回"}';"undefined"!=typeof $task?$done({body:e}):$done({response:{body:e}})}();
+let rst;
+var obj = JSON.parse($request.body);
+if (obj.placementNo === "0007") {
+    rst = '{"materialsList":[{"billMaterialsId":"255","filePath":"h","creativeType":1}],"advertParam":{"skipTime":1}}';
+} else if (obj.placementNo === "G0054") {
+    rst = '{"code":"00","materialsList":[{}]}';
+} else {
+    rst = '{"code":"00","message":"无广告返回"}';
+}
+$done({body: rst})
