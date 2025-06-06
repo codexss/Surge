@@ -1,0 +1,12 @@
+#!name=微信去广告
+#!desc=张小龙，_____！
+#!categort=Enhancement
+
+[Rule]
+DOMAIN,wxa.wxs.qq.com,REJECT,extended-matching
+DOMAIN,wximg.wxs.qq.com,REJECT,extended-matching
+DOMAIN,wxsmw.wxs.qq.com,REJECT,extended-matching
+DOMAIN,wxsnsdythumb.wxs.qq.com,REJECT,extended-matching
+
+[MITM]
+hostname = %APPEND% wxa.wxs.qq.com,wximg.wxs.qq.com,wxsmw.wxs.qq.com,wxsnsdythumb.wxs.qq.com
